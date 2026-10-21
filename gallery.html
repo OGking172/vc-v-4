@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gallery | VC Custom Homes</title>
+<meta name="description" content="Browse photos of custom homes built by VC Custom Homes in Upstate South Carolina.">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<style>:root{--ink:#161616;--mute:#6b6862;--line:#e6e2dc;--soft:#f6f3ee;--red:#9E1B2D;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Montserrat',system-ui,-apple-system,sans-serif}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font:400 .95rem/1.9 var(--sans);color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.wrap{width:min(1240px,90%);margin:auto}
+.narrow{max-width:780px;margin:auto;text-align:center}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:500;text-transform:uppercase;letter-spacing:.05em;line-height:1.1}
+h1{font-size:clamp(2.7rem,7.5vw,6rem)}
+h2{font-size:clamp(2rem,4.6vw,3.5rem);margin-bottom:1.4rem}
+h3{font-size:1.45rem}
+em{font-family:var(--serif);font-style:italic;text-transform:none;letter-spacing:0;font-weight:500}
+h2 em{color:var(--red)}
+.eyebrow{display:block;font:600 .7rem var(--sans);letter-spacing:.34em;text-transform:uppercase;margin-bottom:1.2rem}
+p{color:#4a4743}
+.lead{font:italic 500 clamp(1.2rem,2vw,1.55rem)/1.5 var(--serif);color:inherit}
+.btn{display:inline-block;padding:1rem 2.1rem;border:1px solid currentColor;font:600 .7rem var(--sans);letter-spacing:.26em;text-transform:uppercase;text-decoration:none;color:var(--ink);background:transparent;cursor:pointer;transition:background .35s,color .35s,border-color .35s}
+.btn:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.btn.lt{color:#fff}.btn.lt:hover{background:#fff;color:var(--ink);border-color:#fff}
+.btns{display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap}
+.sec{padding:clamp(4rem,10vw,8rem) 0}
+.soft{background:var(--soft)}
+/* header */
+.hd{position:fixed;top:0;left:0;right:0;z-index:40;color:#fff;transition:background .4s,color .4s,box-shadow .4s}
+.hd.scrolled,.hd.open{background:#fff;color:var(--ink);box-shadow:0 1px 0 var(--line)}
+.hw{display:flex;align-items:center;justify-content:space-between;height:96px;width:100%;padding:0 clamp(1rem,2.2vw,2.2rem) 0 clamp(.9rem,1.6vw,1.6rem);margin:0}
+.logo{text-decoration:none;display:flex;flex-direction:column;line-height:1;gap:.35rem}
+.logo b{font:600 clamp(2.8rem,4.4vw,3.8rem) var(--serif);letter-spacing:.08em;line-height:.9}
+.logo span{font:500 clamp(.62rem,.9vw,.78rem) var(--sans);letter-spacing:.42em;text-transform:uppercase}
+nav{display:flex;align-items:center;gap:2.2rem}
+nav a{text-decoration:none;font:500 .7rem var(--sans);letter-spacing:.24em;text-transform:uppercase;padding:.3rem 0;border-bottom:1px solid transparent;transition:border-color .3s}
+nav a:hover,nav a.on{border-color:currentColor}
+nav a.nb{border:1px solid currentColor;padding:.8rem 1.4rem}
+nav a.nb:hover{background:currentColor}
+nav a.nb:hover{color:inherit}
+.burger{display:none;background:none;border:0;color:inherit;font:600 .7rem var(--sans);letter-spacing:.26em;text-transform:uppercase;cursor:pointer;padding:.5rem 0}
+/* hero + banner */
+.hero,.ban{position:relative;display:grid;place-items:center;text-align:center;color:#fff;overflow:hidden;background:#222}
+.hero{min-height:100svh}.ban{min-height:68vh}
+.hero::after,.ban::after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.28) 50%,rgba(0,0,0,.55))}
+.hbg{position:absolute;left:0;top:0;width:100%;height:112%;object-fit:cover}
+.ban img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hi{position:relative;z-index:1;padding:9rem 1rem 5rem;max-width:960px}
+.hi .eyebrow{color:#fff}
+.hi p{color:#fff}
+.hi .lead{margin:1.6rem auto 2.4rem;max-width:34ch}
+.hero h1,.ban h1{color:#fff}
+.cue{position:absolute;z-index:1;bottom:1.5rem;left:50%;width:1px;height:56px;background:linear-gradient(#fff,transparent);animation:cue 2.4s ease-in-out infinite}
+@keyframes cue{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+/* blocks */
+.row3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:3rem 0}
+.row3 figure{aspect-ratio:4/5;overflow:hidden;background:var(--line)}
+.row3 img,.cover img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}
+.row3 figure:hover img{transform:scale(1.05)}
+.journey{position:relative;min-height:80vh;display:grid;place-items:center;text-align:center;color:#fff;overflow:hidden;background:#222}
+.journey img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.journey::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.42)}
+.journey .hi{padding:5rem 1rem}
+.journey h2{color:#fff;font-size:clamp(2.4rem,6vw,4.6rem)}.journey h2 em{color:#fff}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2.5rem,7vw,6rem);align-items:center}
+.cover{aspect-ratio:4/5;overflow:hidden;background:var(--line)}
+.quote{font:italic 500 clamp(1.6rem,3vw,2.5rem)/1.35 var(--serif);color:var(--ink);margin:1.2rem 0 1.6rem}
+.cite{font:600 .7rem var(--sans);letter-spacing:.28em;text-transform:uppercase;margin-bottom:2rem}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;text-align:center;margin-top:3.5rem}
+.facts b{display:block;font:500 clamp(2.4rem,4.5vw,3.6rem)/1 var(--serif);margin-bottom:.6rem}
+.facts span{font:600 .66rem var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--mute)}
+.band{background:#161616;color:#fff;text-align:center;padding:clamp(4rem,9vw,7rem) 0}
+.band h2{color:#fff}.band h2 em{color:#fff}.band p{color:#cfcbc4;margin-bottom:2.2rem}.band .eyebrow{color:#cfcbc4}
+.vals{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,5rem);margin-top:3rem}
+.vals h3{margin:.8rem 0}
+.vals i{font:italic 500 2.6rem/1 var(--serif);color:var(--red)}
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:2.4rem 1.6rem;margin-top:3.5rem}
+.tm{text-align:center}
+.ph{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--line);display:grid;place-items:center;font:500 3.4rem var(--serif);color:var(--mute);margin-bottom:1.2rem}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%}
+.tm h3{font-size:1.25rem;letter-spacing:.12em}
+.tm p{font:italic 500 1.15rem var(--serif);color:var(--mute)}
+.rl{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2.5rem,6vw,5rem) clamp(2rem,6vw,5rem)}
+.rl .q{font:italic 500 1.35rem/1.55 var(--serif);color:var(--ink)}
+.who{display:flex;flex-wrap:wrap;gap:.3rem 1rem;align-items:baseline;margin-top:1.1rem;padding-top:1rem;border-top:1px solid var(--line)}
+.who b{font:600 .68rem var(--sans);letter-spacing:.26em;text-transform:uppercase}
+.who span{color:var(--mute);font-size:.82rem;flex:1}
+.who a{font:600 .66rem var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--red);text-decoration:none}
+.fm{max-width:760px;margin:auto;display:grid;gap:1.6rem}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem}.fr.t{grid-template-columns:1fr 1fr 1.2fr}
+.fm label{display:grid;gap:.3rem;font:600 .66rem var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--mute)}
+.fm input,.fm textarea{font:400 1rem var(--sans);color:var(--ink);background:transparent;border:0;border-bottom:1px solid #bdb8b0;padding:.6rem 0;width:100%;border-radius:0;transition:border-color .3s}
+.fm input:focus,.fm textarea:focus{outline:0;border-color:var(--ink)}
+.fm input.bad{border-color:var(--red)}
+.fm .btn{justify-self:start}
+.note{font-size:.85rem;color:var(--mute)}.note a{color:var(--ink)}
+/* footer */
+.ft{background:#101010;color:#cfcbc4;padding:clamp(3.5rem,7vw,5.5rem) 0 2rem;font-size:.85rem}
+.fg{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem}
+.ft h4{color:#fff;font:600 .68rem var(--sans);letter-spacing:.3em;margin-bottom:1.1rem}
+.ft p{color:#cfcbc4;line-height:2}
+.ft a{text-decoration:none}.ft a:hover{color:#fff}
+.fs{display:flex;gap:1.6rem;flex-wrap:wrap;margin-top:3rem;padding-top:1.6rem;border-top:1px solid #2a2a2a;font:600 .66rem var(--sans);letter-spacing:.24em;text-transform:uppercase}
+.fc{margin-top:1.2rem;font-size:.75rem;color:#8d8982}
+/* motion */
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity 1s ease,transform 1.1s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.js .rv.in{opacity:1;transform:none}
+@media(max-width:860px){
+ .burger{display:block}
+ nav{position:fixed;inset:0;background:#fff;color:var(--ink);display:none;flex-direction:column;justify-content:center;gap:1.7rem;z-index:-1;text-align:center}
+ nav.open{display:flex}
+ nav a{font:500 1.7rem var(--serif);letter-spacing:.14em}
+ nav a.nb{font:600 .72rem var(--sans);padding:1rem 1.8rem}
+ .row3,.two,.vals,.rl,.facts,.fg,.team,.fr,.fr.t{grid-template-columns:1fr}
+ .facts{grid-template-columns:1fr 1fr}
+ .team{grid-template-columns:1fr 1fr}
+ .cue{display:none}
+}
+@media(max-width:480px){.team{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style>
+<style>
+html,body{height:100%}body{display:flex;flex-direction:column}
+main{flex:1;display:flex;flex-direction:column;min-height:0;height:calc(100svh)}
+.gs{flex:1;display:flex;flex-direction:column;min-height:0}
+.gt{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding:1.2rem 4% .6rem}
+.gt .eyebrow{margin:0}
+.tabs{display:flex;gap:1.6rem;flex-wrap:wrap}
+.tabs button{background:none;border:0;border-bottom:1px solid transparent;font:500 .7rem var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--mute);padding:.3rem 0;cursor:pointer;transition:color .3s,border-color .3s}
+.tabs button:hover{color:var(--ink)}
+.tabs button[aria-pressed=true]{color:var(--ink);border-color:var(--ink)}
+.gc{font:500 .7rem var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
+.stage{flex:1;min-height:0;position:relative;display:flex;align-items:center;justify-content:center;padding:.5rem clamp(3.5rem,7vw,7rem)}
+.stage img{max-width:100%;max-height:100%;object-fit:contain;opacity:0;transform:translateX(var(--dx,0px)) scale(.985);transition:opacity .6s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.stage img.ready{opacity:1;transform:none}
+.msg{display:none;color:var(--mute)}
+.ar{position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;border:1px solid var(--ink);background:#fff;color:var(--ink);font-size:1.7rem;line-height:1;cursor:pointer;display:grid;place-items:center;transition:background .3s,color .3s}
+.ar:hover{background:var(--ink);color:#fff}
+.ar.p{left:clamp(.4rem,1.5vw,1.6rem)}.ar.n{right:clamp(.4rem,1.5vw,1.6rem)}
+.cp{text-align:center;padding:.6rem 1rem;font:italic 500 1.2rem var(--serif)}
+.cp span{font:500 .7rem var(--sans);letter-spacing:.2em;color:var(--mute);margin-left:1rem;font-style:normal}
+.cp.sw{animation:up .6s cubic-bezier(.2,.7,.2,1)}
+@keyframes up{from{opacity:0;transform:translateY(8px)}}
+.th{display:flex;gap:8px;overflow-x:auto;padding:.4rem 4% 1.1rem}
+.th button{flex:0 0 auto;width:92px;height:64px;padding:0;border:0;outline:1px solid transparent;outline-offset:2px;overflow:hidden;background:var(--line);cursor:pointer;opacity:.55;transition:opacity .3s,outline-color .3s}
+.th button:hover{opacity:1}
+.th button[aria-current=true]{opacity:1;outline-color:var(--ink)}
+.th img{width:100%;height:100%;object-fit:cover}
+@media(max-width:860px){.stage{padding:.5rem .6rem}.ar{width:42px;height:42px}.th button{width:72px;height:52px}main{height:auto;min-height:100svh}.stage{min-height:52vh}}
+</style>
+</head>
+<body>
+<header class="hd scrolled" id="hd"><div class="hw">
+ <a class="logo" href="index.html"><b>VC</b><span>Custom Homes</span></a>
+ <nav id="nav" aria-label="Main"><a href="index.html">Home</a><a href="about.html">About</a><a class="on" href="gallery.html">Gallery</a><a href="reviews.html">Testimonials</a><a href="warranty.html">Warranty</a><a class="nb" href="index.html#contact">Contact Us</a></nav>
+ <button class="burger" id="bg" aria-expanded="false" aria-controls="nav">Menu</button>
+</div></header>
+<main style="padding-top:84px">
+<section class="gs">
+ <div class="gt"><span class="eyebrow">Home gallery</span>
+  <div class="tabs" role="group" aria-label="Filter photos"><button data-f="all" aria-pressed="true">All</button><button data-f="Exterior" aria-pressed="false">Exterior</button><button data-f="Interior" aria-pressed="false">Interior</button><button data-f="Garage" aria-pressed="false">Garages</button></div>
+  <span class="gc" id="count"></span></div>
+ <div class="stage" id="stage"><button class="ar p" aria-label="Previous photo">&#8249;</button><img id="big" alt="" referrerpolicy="no-referrer"><span class="msg" id="msg">This photo could not be loaded.</span><button class="ar n" aria-label="Next photo">&#8250;</button></div>
+ <div class="cp" id="cap"></div>
+ <div class="th" id="thumbs" aria-label="All photos"></div>
+</section>
+</main>
+<script>
+const hd=document.getElementById('hd'),bg=document.getElementById('bg'),nv=document.getElementById('nav');
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const solid=hd.classList.contains('scrolled');
+function sc(){hd.classList.toggle('scrolled',solid||scrollY>60||nv.classList.contains('open'));}
+bg.addEventListener('click',()=>{const o=nv.classList.toggle('open');hd.classList.toggle('open',o);bg.setAttribute('aria-expanded',o);bg.textContent=o?'Close':'Menu';sc()});
+nv.addEventListener('click',e=>{if(e.target.tagName==='A'){nv.classList.remove('open');hd.classList.remove('open');bg.textContent='Menu';sc()}});
+let tk=false;addEventListener('scroll',()=>{if(!tk){tk=true;requestAnimationFrame(()=>{sc();tk=false})}},{passive:true});sc();
+const rv=[...document.querySelectorAll('.rv')];
+rv.forEach((el,i)=>{const k=[...el.parentElement.children].indexOf(el);el.style.setProperty('--d',(k%4)*.1+'s')});
+const done=el=>{el.classList.add('in');setTimeout(()=>el.classList.remove('rv','in'),1800)};
+if('IntersectionObserver' in window){const io=new IntersectionObserver((es,o)=>es.forEach(e=>{if(e.isIntersecting){done(e.target);o.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -4% 0px'});rv.forEach(el=>io.observe(el))}else rv.forEach(done);
+const H="https://white-hare-927448.hostingersite.com/wp-content/uploads/",S="https://vccustomhomes.com/wp-content/uploads/",V="https://vccustomhomes.com/wp-content/uploads/2025/05/";
+const P=[
+["Exterior",H+"2025/04/Front-16-edited-1.png","Front exterior"],
+["Exterior",H+"2025/04/Front-11-1-scaled.jpg","Front exterior"],
+["Exterior",H+"2025/04/Back-1-scaled.jpg","Two-story home with back patio, green lawn, and pool"],
+["Exterior",H+"2025/06/Front-15-1-scaled.jpg","Modern one-story home with two-car garage"],
+["Exterior",H+"2025/04/Front-1-scaled.png","Front exterior"],
+["Exterior",H+"2025/10/IMG_0987-scaled.webp","Exterior view"],
+["Exterior",H+"2025/04/Back-8.jpg","Rear exterior"],
+["Exterior",H+"2025/04/Back-10-scaled.jpg","Rear exterior"],
+["Exterior",H+"2025/04/Front-10-scaled.jpg","Front exterior"],
+["Interior",H+"2025/04/Kitchen-2.jpg","Kitchen"],
+["Interior",H+"2025/04/Dining-3-scaled.jpg","Dining area"],
+["Interior",H+"2025/10/IMG_1001-scaled.webp","Living room with hardwood floors, crown molding, and recessed lighting"],
+["Interior",H+"2025/04/Living-2.jpg","Living room"],
+["Interior",H+"2025/04/Bath-7-scaled.jpg","Bathroom"],
+["Interior",H+"2025/04/Bath-9.jpg","Bathroom"],
+["Interior",H+"2025/04/Bath-6-scaled.jpg","Bathroom"],
+["Interior",H+"2025/10/IMG_1051-scaled.webp","Walk-in shower with marble-pattern tile and hexagon tile floor"],
+["Interior",H+"2025/10/IMG_1009-scaled.webp","Walk-in closet with built-in shelving and a central island"],
+["Interior",H+"2025/10/Photo-Sep-12-2025-2-56-32-PM-scaled.webp","Vanity area leading into a walk-in closet"],
+["Interior",H+"2025/10/IMG_0985-scaled.webp","Interior view"],
+["Interior",H+"2025/10/IMG_0969.webp","Interior view"],
+["Interior",H+"2025/04/Screenshot-2025-04-09-at-11.23.03%20AM.png","Interior view"],
+["Garage",H+"2025/10/IMG_1038-scaled.webp","Garage with polished epoxy floor and pendant lights"],
+["Garage",H+"2025/04/Garage-View--scaled.jpg","Garage view"],
+["Garage",V+"2-Car-Detached-edit-819x1024.webp","Two-car detached garage"],
+["Garage",V+"Attached-Carport-edit-819x1024.webp","Attached carport"],
+["More",H+"2025/06/Screenshot-2025-06-03-at-2.50.50%20PM.png","Project photo"],
+["More",H+"2025/05/480682724_2708833209314004_174790457973228719_n.jpg","Project photo"],
+["More",H+"2025/06/480334376_2708833199314005_975883298237976439_n.jpg","Project photo"],
+["More",H+"2025/06/480496076_2708833205980671_9111260585323513373_n.jpg","Project photo"],
+["More",H+"2025/06/IMG_7583.jpeg","Project photo"],
+["More",H+"2025/06/480651453_2708833449313980_6028984618107570106_n.jpg","Project photo"],
+["More",H+"2025/06/480322703_2708833139314011_2112742171123839103_n.jpg","Project photo"],
+["More",H+"2025/06/IMG_7589.jpeg","Project photo"],
+["More",H+"2025/06/Untitled.jpg","Project photo"],
+["More",H+"2025/06/481083095_2708833219314003_5133902645316478913_n.jpg","Project photo"],
+["Exterior",H+"2025/05/480708700_1041112788036344_6357652938482707117_n.webp","Farmhouse-style spec homes at Palmetto Farms in Pelzer, SC"],
+["Exterior",H+"2025/04/Back-4-scaled.jpg","Rear exterior"],
+["Interior",H+"2025/05/Bedroom.webp","Bedroom"],
+["Interior",H+"2025/05/Foyer-3.webp","Foyer"],
+["Interior",H+"2025/04/Kitchen-6.jpg","Kitchen"],
+["More",H+"2025/05/480931647_2710548092475849_456698904544605111_n-copy.webp","Palmetto Farms photo"],
+["More",H+"2025/05/Screenshot-2025-04-28-at-3.50.32%20PM.webp","Palmetto Farms photo"],
+["More",H+"2025/05/480884945_2708833482647310_1241567134408522106_n-copy.webp","Palmetto Farms photo"],
+["More",H+"2025/05/481213530_1041112621369694_4257027919794597141_n.webp","Palmetto Farms photo"],
+["More",H+"2025/06/481074380_2708833182647340_2483424166467856808_n.jpeg","Project photo"],
+["More",H+"2025/06/481124817_1041112454703044_8789393752182382703_n.jpg","Project photo"],
+["More",H+"2025/06/481154228_1041112498036373_6820156139683199134_n.jpg","Project photo"],
+["More",H+"2025/06/481166447_1041112501369706_5781858888863087003_n.jpeg","Project photo"],
+["More",H+"2025/06/482003848_1041112428036380_3435230024463752864_n.jpg","Project photo"],
+["More",H+"2025/06/481275783_1041112371369719_6584393209316818331_n.jpg","Project photo"],
+["Exterior","https://res.cloudinary.com/a9qr2ylr/image/upload/f_auto,q_auto/vc-img-0060","Front entry with stone steps and double doors"],
+["Interior","images/vc-img-0061.jpg","Custom built-in mudroom lockers"],
+["Interior","https://res.cloudinary.com/a9qr2ylr/image/upload/f_auto,q_auto/vc-img-0062","Staircase with lit step lights"],
+["Interior","https://res.cloudinary.com/a9qr2ylr/image/upload/f_auto,q_auto/vc-img-0066","Kitchen with island and pendant lights"],
+["Interior","images/vc-img-0068.jpg","Room with stained wood plank ceiling"],
+["Interior","images/vc-img-0070.jpg","Dining room with coffered ceiling"],
+["Interior","https://res.cloudinary.com/a9qr2ylr/image/upload/f_auto,q_auto/vc-img-0072","Hallway with wood barrel ceiling and chandelier"],
+["Interior","https://res.cloudinary.com/a9qr2ylr/image/upload/f_auto,q_auto/vc-img-0079","Bedroom with tray ceiling and chandelier"],
+["Interior","images/vc-img-0083.jpg","Tiled walk-in shower"],
+["Interior","https://i.ibb.co/7dSfvbZt/02-B36-A1-F-35-A0-434-C-8885-090961-F29476.jpg","Vaulted ceiling with exposed wood beams and green board-and-batten wall"],
+["Interior","https://i.ibb.co/YF8CM1NS/Bright-Farmhouse-Modern-Open-Plan-Interior-1.png","Bright farmhouse-style open plan interior"]
+];
+function cands(u){const out=[u];if(u.includes('/7dSfvbZt/'))out.push(u.replace('/7dSfvbZt/','/wFdkyYPh/'));if(u.includes('/YF8CM1NS/'))out.push(u.replace('/YF8CM1NS/','/ZpKjPFfr/'));if(u.startsWith(H)){const r=u.slice(H.length);out.push(H+r.replace(/\.(jpe?g|png)$/i,'.webp'),S+r,S+r.replace(/\.(jpe?g|png)$/i,'.webp'))}return out}
+function tryNext(im,fail){const l=JSON.parse(im.dataset.c),n=+im.dataset.n+1;if(n<l.length){im.dataset.n=n;im.src=l[n]}else fail(im)}
+function tag(p,alt){return `referrerpolicy="no-referrer" data-n="0" data-c='${JSON.stringify(cands(p[1]))}' src="${p[1]}" alt="${alt}"`}
+const big=document.getElementById('big'),msg=document.getElementById('msg'),cap=document.getElementById('cap'),thumbs=document.getElementById('thumbs'),count=document.getElementById('count');
+let cur=P,idx=0;
+big.addEventListener('error',()=>tryNext(big,()=>{big.style.display='none';msg.style.display='block'}));
+big.addEventListener('load',()=>{big.style.display='block';msg.style.display='none';requestAnimationFrame(()=>requestAnimationFrame(()=>big.classList.add('ready')))});
+function show(i,dir=0){idx=(i+cur.length)%cur.length;const p=cur[idx];big.classList.remove('ready');big.style.setProperty('--dx',(dir*50)+'px');big.dataset.n=0;big.dataset.c=JSON.stringify(cands(p[1]));big.src=p[1];big.alt=p[2];
+ cap.innerHTML=p[2]+'<span>'+(idx+1)+' / '+cur.length+'</span>';cap.classList.remove('sw');void cap.offsetWidth;cap.classList.add('sw');
+ thumbs.querySelectorAll('button').forEach((b,j)=>{b.setAttribute('aria-current',j===idx);if(j===idx)b.scrollIntoView({block:'nearest',inline:'center',behavior:'smooth'})});
+ new Image().src=cur[(idx+1)%cur.length][1]}
+function build(f){cur=P.filter(p=>f==='all'||p[0]===f);
+ thumbs.innerHTML=cur.map((p,i)=>`<button data-i="${i}" aria-label="Show photo ${i+1}: ${p[2]}"><img ${tag(p,'')} loading="lazy"></button>`).join('');
+ thumbs.querySelectorAll('img').forEach(im=>im.addEventListener('error',()=>tryNext(im,x=>x.closest('button').style.display='none')));
+ count.textContent=cur.length+' photos';show(0)}
+document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tabs button').forEach(x=>x.setAttribute('aria-pressed',x===b));build(b.dataset.f)});
+thumbs.onclick=e=>{const b=e.target.closest('button');if(b)show(+b.dataset.i,Math.sign(+b.dataset.i-idx))};
+document.querySelector('.ar.p').onclick=()=>show(idx-1,-1);document.querySelector('.ar.n').onclick=()=>show(idx+1,1);
+document.addEventListener('keydown',e=>{if(e.key==='ArrowLeft')show(idx-1,-1);if(e.key==='ArrowRight')show(idx+1,1)});
+let sx=null;const st=document.getElementById('stage');
+st.addEventListener('touchstart',e=>{sx=e.touches[0].clientX},{passive:true});
+st.addEventListener('touchend',e=>{if(sx===null)return;const d=e.changedTouches[0].clientX-sx;if(Math.abs(d)>50)show(idx+(d<0?1:-1),d<0?1:-1);sx=null});
+build('all');
+(function(){const k=decodeURIComponent(location.hash.slice(1));if(!k)return;const i=P.findIndex(p=>p[1].includes(k));if(i>-1)show(i)})();
+</script>
+</body>
+</html>
